@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import permission_required
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import (get_object_or_404, render, HttpResponseRedirect, redirect)
 from django.template import loader
-
 from .forms import FestivalForm
 from .models import Footballer, Statistics
 from django.contrib.auth.models import User
