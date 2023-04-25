@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="348f0deb-9424-4525-97ee-65f881e7afd1" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MM5YAW0GmI4V5Szt4oxqvaWy1v" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "last_opened_file_path": "C:/Users/Бакдаулет/PycharmProjects/cinema/myworld",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Бакдаулет\PycharmProjects\hospital\doctors\templates\pages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.views">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cinema" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doctors" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doctors/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cinema" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/doctors" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/doctors/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="hospital" type="Python.DjangoServer" factoryName="Django server">
+      <module name="cinema" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.models" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="348f0deb-9424-4525-97ee-65f881e7afd1" name="Changes" comment="" />
+      <created>1677564655436</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677564655436</updated>
+      <workItem from="1677564664039" duration="1078000" />
+      <workItem from="1677565767546" duration="6587000" />
+      <workItem from="1677574089578" duration="4073000" />
+      <workItem from="1677578524118" duration="593000" />
+      <workItem from="1677586551973" duration="3234000" />
+      <workItem from="1677594326836" duration="1522000" />
+      <workItem from="1677638631725" duration="10172000" />
+      <workItem from="1677685707418" duration="4000" />
+      <workItem from="1677685727327" duration="1000" />
+      <workItem from="1677751211930" duration="108000" />
+      <workItem from="1677833790851" duration="758000" />
+      <workItem from="1677926978814" duration="289000" />
+      <workItem from="1677941785206" duration="21000" />
+      <workItem from="1678017536445" duration="54000" />
+      <workItem from="1678119869688" duration="413000" />
+      <workItem from="1678120290973" duration="167000" />
+      <workItem from="1678120469258" duration="813000" />
+      <workItem from="1678121884364" duration="17000" />
+      <workItem from="1678153317784" duration="1685000" />
+      <workItem from="1678169023600" duration="408000" />
+      <workItem from="1678284588179" duration="8000" />
+      <workItem from="1678356439118" duration="1772000" />
+      <workItem from="1678370390442" duration="29000" />
+      <workItem from="1678420849812" duration="2011000" />
+      <workItem from="1678441425397" duration="11000" />
+      <workItem from="1678446649532" duration="585000" />
+      <workItem from="1678448194680" duration="10000" />
+      <workItem from="1678448292434" duration="94000" />
+      <workItem from="1678448990684" duration="49000" />
+      <workItem from="1678449179295" duration="26000" />
+      <workItem from="1678449350393" duration="23000" />
+      <workItem from="1678449414494" duration="8000" />
+      <workItem from="1678449506515" duration="9000" />
+      <workItem from="1678469674473" duration="36000" />
+      <workItem from="1678469770608" duration="27000" />
+      <workItem from="1678469990270" duration="13000" />
+      <workItem from="1678470107456" duration="110000" />
+      <workItem from="1678471930018" duration="16000" />
+      <workItem from="1678472105707" duration="51000" />
+      <workItem from="1678472179414" duration="16000" />
+      <workItem from="1678472309519" duration="116000" />
+      <workItem from="1678774755640" duration="190000" />
+      <workItem from="1678775031012" duration="1408000" />
+      <workItem from="1678776670549" duration="774000" />
+      <workItem from="1678777611434" duration="1335000" />
+      <workItem from="1678806648646" duration="408000" />
+      <workItem from="1678808642923" duration="78000" />
+      <workItem from="1678808732003" duration="472000" />
+      <workItem from="1678858166006" duration="196000" />
+      <workItem from="1678858497685" duration="115000" />
+      <workItem from="1679214679246" duration="2345000" />
+      <workItem from="1679234246140" duration="71000" />
+      <workItem from="1679234367915" duration="71000" />
+      <workItem from="1679234473552" duration="206000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/hospital$views.coverage" NAME="views Coverage Results" MODIFIED="1678120005225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/doctors" />
+    <SUITE FILE_PATH="coverage/hospital$models.coverage" NAME="models Coverage Results" MODIFIED="1677641616873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/doctors" />
+  </component>
+</project>

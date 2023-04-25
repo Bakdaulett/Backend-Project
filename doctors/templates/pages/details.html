@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Footballer: {{player.name}} </h2>
+<h2>Statistics: </h2>
+
+<ul>
+    {% for p in ans %}
+    <li><h4 style="font-family: 'Book Antiqua', sans-serif, Arial; color: firebrick  ">{{ p.club }}</h4></li>
+        <p>Games: <strong>{{ p.game}}</strong></p>
+        <p>Goals: <strong>{{ p.goal}}</strong></p>
+        <p>Assists: <strong>{{ p.assist}}</strong></p>
+    {% endfor %}
+</ul>
+{% endblock %}

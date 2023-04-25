@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="main">
+
+    {% for data in dataset %}
+
+    {{ data.name }}<br/>
+    {{ data.price }}<br/>
+    {{ data.age }}<br/>
+    <hr/>
+
+    {% endfor %}
+
+</div>
+{% endblock %}

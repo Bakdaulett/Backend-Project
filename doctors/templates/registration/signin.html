@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/static/signin.css" >
+</head>
+<body>
+
+<div class="register-box">
+  <h2>Login</h2>
+  <form action="/signin" method="post">
+      {% csrf_token %}
+    <div class="user-box">
+      <input type="text" name="username" id = "username" required="">
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="pass1" id = "pass1" required="">
+      <label>Password</label>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+
+
+</body>
+</html>

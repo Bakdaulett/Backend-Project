@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+    <div>
+        <h1>Searching for:  {{ name }}</h1>
+        <p style = "font-family: 'Arial Narrow', sans-serif; font-size: 22px">Players are: </p>
+        <ul>
+            {% for s in data %}
+                <li><a style = "font-size: 18px" href="details/{{ s.id }}">{{ s.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="/static/signup.css" >
+</head>
+<body>
+<div class="register-box">
+  <h2>Register</h2>
+  <form action="/signup" method="post">
+    {% csrf_token %}
+    <div class="user-box">
+      <input type="text" name="username" id = "username" required>
+      <label>Username</label>
+    </div>
+    <div class="user-box">
+      <input type="email" name="email" required>
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="fname" required>
+      <label>Firstname</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="lname" required>
+      <label>Lastname</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="pass1" id = "pass1" required>
+      <label>Password</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="pass2" id = "pass2" required>
+      <label>Confirm Password</label>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+
+{% if check is not empty %}
+ {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Message:</strong> {{ message }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+    {% endfor %}
+{% endif %}
+
+
+</body>
+</html>
