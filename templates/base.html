@@ -16,11 +16,11 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary position-top">
-    <a class="navbar-brand" href="/">{% block brand %}
-        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" style = "border-radius: 50%; height: 70px; width: 70px; margin-right: 20px">
+<!--    <a class="navbar-brand" href="/">{% block brand %}-->
+<!--        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" style = "border-radius: 50%; height: 50px; width: 50px; margin-right: 20px">-->
 
-<!--        <img src="{% static 'logo4.png' %}" style="height: 60px; width: 60px">-->
-        {% endblock %}</a>
+<!--&lt;!&ndash;        <img src="{% static 'logo4.png' %}" style="height: 60px; width: 60px">&ndash;&gt;-->
+<!--        {% endblock %}</a>-->
     <form action="">
         <button class="navbar-toggler" type="submit" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,6 +30,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             {% if user.is_authenticated %}
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" style = "border-radius: 50%; height: 50px; width: 50px; margin-right: 20px">
             <li class="nav-item" style="color: white"><a class="nav-link" style="font-size: 18px; color: yellow;"><i><strong>{{ user.username }} </strong></i></a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'all' %}" style="font-size: 18px">Players list</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'signout' %}" style="font-size: 18px">Signout</a></li>

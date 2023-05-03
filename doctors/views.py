@@ -1,12 +1,17 @@
+import os
 from audioop import reverse
 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import permission_required, login_required
+from django.core.files.storage import FileSystemStorage
 from django.db import transaction
 from django.db.models.signals import post_save
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import (get_object_or_404, render, HttpResponseRedirect, redirect)
 from django.template import loader
+
+from cinema import settings
+from .forms import FestivalForm, UploadForm
 from .models import Footballer, Statistics, Profile
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -104,6 +109,8 @@ def signup(request):
         pass2 = request.POST['pass2']
         check = ""
 
+        form = UploadForm(request.POST, request.FILES)
+
         if User.objects.filter(username=username).first():
             messages.error(request, "This username is already taken")
             check = "taken"
@@ -122,7 +129,6 @@ def signup(request):
             return render(request, 'registration/signup.html', context)
 
         myuser = User.objects.create_user(username, email, pass1)
-        profile = Profile()
         profile.user = myuser
         profile.save()
 
@@ -161,3 +167,15 @@ def signout(request):
 
 def profile(request):
     return render(request, 'pages/profile.html')
+
+
+def media_upload(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+        return render(request, 'pages/media.html', {
+            'uploaded_file_url': uploaded_file_url
+        })
+    return render(request, 'pages/media.html')

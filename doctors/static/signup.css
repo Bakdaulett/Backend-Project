@@ -52,7 +52,7 @@ h2 {
     font-size: 12px;
 }
 
-.register-box button {
+.bah{
     border: none;
     outline: none;
     background: #03a9f4;
@@ -64,6 +64,6 @@ h2 {
     transition: 0.5s;
 }
 
-.register-box button:hover {
+.bah:hover{
     background: #0166bf;
 }

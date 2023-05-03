@@ -5,22 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="348f0deb-9424-4525-97ee-65f881e7afd1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/photo_2023-04-13_23-14-41.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/profile_pics/photo_2023-04-13_23-14-41.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hospital.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hospital.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doctors/templates/pages/media.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctors/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctors/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/static/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/static/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/templates/pages/all.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/templates/pages/all.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/templates/pages/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/templates/pages/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/templates/pages/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/templates/pages/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/templates/registration/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/photo_2023-04-13_23-14-41.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profile_pics/photo_2023-04-13_23-14-41.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,8 +33,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -237,7 +236,7 @@
       <workItem from="1683045463986" duration="205000" />
       <workItem from="1683045698403" duration="45000" />
       <workItem from="1683048823963" duration="931000" />
-      <workItem from="1683072233182" duration="7618000" />
+      <workItem from="1683072233182" duration="13843000" />
     </task>
     <servers />
   </component>
