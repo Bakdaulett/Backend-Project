@@ -29,11 +29,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             {% if user.is_authenticated %}
-            <li class="nav-item" style="color: white"><a class="nav-link" style="font-size: 18px; color: yellow;">
-                <i><strong>{{ user.username }} </strong></i></a></li>
-
+            <li class="nav-item" style="color: white"><a class="nav-link" style="font-size: 18px; color: yellow;"><i><strong>{{ user.username }} </strong></i></a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'all' %}" style="font-size: 18px">Players list</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'signout' %}" style="font-size: 18px">Signout</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}" style="font-size: 18px">Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="/admin" style="font-size: 18px">Admin site</a></li>
             {% else %}
             <li class="nav-item" style="color: white"><a class="nav-link" style="font-size: 18px; color: yellow;">

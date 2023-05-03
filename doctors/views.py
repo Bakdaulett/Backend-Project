@@ -1,9 +1,10 @@
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import permission_required
+from django.contrib.auth.decorators import permission_required, login_required
+from django.db import transaction
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import (get_object_or_404, render, HttpResponseRedirect, redirect)
 from django.template import loader
-from .forms import FestivalForm
+from .forms import FestivalForm, UserForm, ProfileForm
 from .models import Footballer, Statistics
 from django.contrib.auth.models import User
 from django.contrib import messages
@@ -150,3 +151,25 @@ def signin(request):
 def signout(request):
     logout(request)
     return render(request, "registration/signout.html")
+
+
+@login_required
+@transaction.atomic
+def update_profile(request):
+    if request.method == 'POST':
+        user_form = UserForm(request.POST, instance=request.user)
+        profile_form = ProfileForm(request.POST, instance=request.user.profile)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            messages.success(request, _('Your profile was successfully updated!'))
+            return redirect('settings:profile')
+        else:
+            messages.error(request, _('Please correct the error below.'))
+    else:
+        user_form = UserForm(instance=request.user)
+        profile_form = ProfileForm(instance=request.user.profile)
+    return render(request, 'pages/profile.html', {
+        'user_form': user_form,
+        'profile_form': profile_form
+    })
