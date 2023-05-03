@@ -1,62 +1,136 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="stylesheet" href="/static/signup.css" >
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .register-box {
+            width: 400px;
+            background: #f9f9f9;
+            padding: 40px;
+            position: relative;
+            margin: auto;
+            margin-top: 100px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        h2 {
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .register-box form .user-box {
+            position: relative;
+        }
+
+        .register-box form .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #999;
+            outline: none;
+            background: transparent;
+        }
+
+        .register-box form .user-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #333;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .register-box form .user-box input:focus ~ label,
+        .register-box form .user-box input:valid ~ label {
+            top: -20px;
+            left: 0;
+            color: #03a9f4;
+            font-size: 12px;
+        }
+
+        .bah {
+            border: none;
+            outline: none;
+            background: #0166bf;
+            color: #fff;
+            font-size: 18px;
+            border-radius: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .bah:hover {
+            background: #0166bf;
+        }
+
+    </style>
 </head>
 <body>
 <div class="register-box">
-  <h2>Register</h2>
-  <form action="/signup" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <div class="user-box">
-      <input type="text" name="username" id = "username" required>
-      <label>Username</label>
-    </div>
-    <div class="user-box">
-      <input type="email" name="email" required>
-      <label>Email</label>
-    </div>
-    <div class="user-box">
-      <input type="text" name="fname" required>
-      <label>Firstname</label>
-    </div>
-    <div class="user-box">
-      <input type="text" name="lname" required>
-      <label>Lastname</label>
-    </div>
-    <div class="user-box">
-      <input type="password" name="pass1" id = "pass1" required>
-      <label>Password</label>
-    </div>
-    <div class="user-box">
-      <input type="password" name="pass2" id = "pass2" required>
-      <label>Confirm Password</label>
-    </div>
-     <form method="post" enctype="multipart/form-data">
+    <h2>Register</h2>
+    <form action="/signup" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="user-box">
+            <input type="text" name="username" id="username" required>
+            <label>Username</label>
+        </div>
+        <div class="user-box">
+            <input type="email" name="email" required>
+            <label>Email</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="fname" required>
+            <label>Firstname</label>
+        </div>
+        <div class="user-box">
+            <input type="text" name="lname" required>
+            <label>Lastname</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="pass1" id="pass1" required>
+            <label>Password</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="pass2" id="pass2" required>
+            <label>Confirm Password</label>
+        </div>
+          <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="file" name="myfile">
-    <button type="submit" class = "ada">Upload</button>
+    <button type="submit">Upload</button>
   </form>
 
   {% if uploaded_file_url %}
     <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
   {% endif %}
-    <button type="submit" class = "bah">Register</button>
-  </form>
+
+        <br>
+        <button type="submit" class="bah">Register</button>
+    </form>
 </div>
 
 
 {% if check is not empty %}
- {% for message in messages %}
-    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-        <strong>Message:</strong> {{ message }}
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-    </div>
-    {% endfor %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message:</strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endfor %}
 {% endif %}
 
 </body>

@@ -1,22 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<!-- <div class="content-section">-->
-<!--      <div class="media" style="display: flex">-->
-<!--&lt;!&ndash;        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" style = "border-radius: 50%; height: 80px; width: 80px; margin-right: 20px">&ndash;&gt;-->
-<!--        <div class="media-body">-->
-<!--          <p  style = "font-size: 20px; font-family: 'Arial', Arial, sans-serif " class="account-heading"> <b>{{ request.user.username }}</b> </br>-->
-<!--          {{ request.user.email }}</p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
     <h2>Profile</h2>
 <div>
  <p style = "font-size: 17px">
@@ -27,6 +14,18 @@
  <strong>Last Login:</strong> {{ request.user.last_login }}<br>
  </p>
 </div>
+    <br>
+    <hr>
+ <p style = "font-family: 'Arial', Arial, sans-serif"><strong>Upload a photo for the avatar</strong></p>
+ <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="myfile">
+    <button type="submit">Upload</button>
+  </form>
 
-</body>
-</html>
+  {% if uploaded_file_url %}
+    <p>The account photo was successfully replaced!</p>
+  {% endif %}
+  <p><a href="{% url 'home' %}">Return to home page</a></p>
+
+{% endblock %}

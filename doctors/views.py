@@ -100,6 +100,12 @@ def delete_view(request, id):
 
 
 def signup(request):
+    if request.method == 'POST' and request.FILES['myfile']:
+        myfile = request.FILES['myfile']
+        fs = FileSystemStorage()
+        filename = fs.save(myfile.name, myfile)
+        uploaded_file_url = fs.url(filename)
+
     if request.method == "POST":
         username = request.POST['username']
         email = request.POST['email']
@@ -110,6 +116,8 @@ def signup(request):
         check = ""
 
         form = UploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
 
         if User.objects.filter(username=username).first():
             messages.error(request, "This username is already taken")
@@ -129,8 +137,6 @@ def signup(request):
             return render(request, 'registration/signup.html', context)
 
         myuser = User.objects.create_user(username, email, pass1)
-        profile.user = myuser
-        profile.save()
 
         myuser.is_staff = True
         myuser.first_name = fname
@@ -166,16 +172,15 @@ def signout(request):
 
 
 def profile(request):
-    return render(request, 'pages/profile.html')
-
-
-def media_upload(request):
     if request.method == 'POST' and request.FILES['myfile']:
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
-        return render(request, 'pages/media.html', {
+        return render(request, 'pages/profile.html', {
             'uploaded_file_url': uploaded_file_url
         })
-    return render(request, 'pages/media.html')
+    return render(request, 'pages/profile.html')
+
+
+

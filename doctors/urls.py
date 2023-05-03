@@ -17,7 +17,6 @@ urlpatterns = [
     path('signout', views.signout, name='signout'),
     path('signin', views.signin, name='signin'),
     path('accounts/profile', views.profile, name='profile'),
-    path('media', views.media_upload, name='media'),
 
 
 ]
