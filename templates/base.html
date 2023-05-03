@@ -2,7 +2,6 @@
 {% load static %}
 <html lang="en">
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -18,7 +17,9 @@
 <body>
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary position-top">
     <a class="navbar-brand" href="/">{% block brand %}
-        <img src="{% static 'logo4.png' %}" style="height: 60px; width: 60px">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" style = "border-radius: 50%; height: 70px; width: 70px; margin-right: 20px">
+
+<!--        <img src="{% static 'logo4.png' %}" style="height: 60px; width: 60px">-->
         {% endblock %}</a>
     <form action="">
         <button class="navbar-toggler" type="submit" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -32,7 +33,7 @@
             <li class="nav-item" style="color: white"><a class="nav-link" style="font-size: 18px; color: yellow;"><i><strong>{{ user.username }} </strong></i></a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'all' %}" style="font-size: 18px">Players list</a></li>
             <li class="nav-item"><a class="nav-link" href="{% url 'signout' %}" style="font-size: 18px">Signout</a></li>
-            <li class="nav-item"><a class="nav-link" href="{% url 'profile' %}" style="font-size: 18px">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="/accounts/profile" style="font-size: 18px">Profile</a></li>
             <li class="nav-item"><a class="nav-link" href="/admin" style="font-size: 18px">Admin site</a></li>
             {% else %}
             <li class="nav-item" style="color: white"><a class="nav-link" style="font-size: 18px; color: yellow;">

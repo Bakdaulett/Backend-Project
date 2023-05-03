@@ -1,4 +1,6 @@
+from django.conf.urls.static import static
 from django.urls import path
+from cinema import settings
 from doctors import views
 
 
@@ -14,6 +16,11 @@ urlpatterns = [
     path('signup', views.signup, name='signup'),
     path('signout', views.signout, name='signout'),
     path('signin', views.signin, name='signin'),
-    path('profile', views.update_profile, name='profile'),
+    path('accounts/profile', views.profile, name='profile'),
+
 
 ]
+
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

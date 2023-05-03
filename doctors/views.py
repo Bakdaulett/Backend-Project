@@ -1,11 +1,13 @@
+from audioop import reverse
+
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import permission_required, login_required
 from django.db import transaction
+from django.db.models.signals import post_save
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import (get_object_or_404, render, HttpResponseRedirect, redirect)
 from django.template import loader
-from .forms import FestivalForm, UserForm, ProfileForm
-from .models import Footballer, Statistics
+from .models import Footballer, Statistics, Profile
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
@@ -19,13 +21,12 @@ def home(request):
 def search(request):
     name = request.GET.get("name", "")
     data = Footballer.objects.all().filter(name__contains=name).values()
-    template = loader.get_template('pages/search.html')
     context = {
         'data': data,
         'name': name,
     }
 
-    return HttpResponse(template.render(context=context))
+    return render(request, "pages/search.html", context)
 
 
 @permission_required('doctors.view_footballer', raise_exception=True)
@@ -121,6 +122,11 @@ def signup(request):
             return render(request, 'registration/signup.html', context)
 
         myuser = User.objects.create_user(username, email, pass1)
+        profile = Profile()
+        profile.user = myuser
+        profile.save()
+
+        myuser.is_staff = True
         myuser.first_name = fname
         myuser.last_name = lname
         myuser.save()
@@ -153,23 +159,5 @@ def signout(request):
     return render(request, "registration/signout.html")
 
 
-@login_required
-@transaction.atomic
-def update_profile(request):
-    if request.method == 'POST':
-        user_form = UserForm(request.POST, instance=request.user)
-        profile_form = ProfileForm(request.POST, instance=request.user.profile)
-        if user_form.is_valid() and profile_form.is_valid():
-            user_form.save()
-            profile_form.save()
-            messages.success(request, _('Your profile was successfully updated!'))
-            return redirect('settings:profile')
-        else:
-            messages.error(request, _('Please correct the error below.'))
-    else:
-        user_form = UserForm(instance=request.user)
-        profile_form = ProfileForm(instance=request.user.profile)
-    return render(request, 'pages/profile.html', {
-        'user_form': user_form,
-        'profile_form': profile_form
-    })
+def profile(request):
+    return render(request, 'pages/profile.html')
