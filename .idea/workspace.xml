@@ -8,15 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cinema/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctors/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doctors/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctors/static/signup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctors/templates/pages/media.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/templates/pages/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/templates/pages/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doctors/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/templates/registration/signup.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doctors/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/doctors/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/photo_2023-04-13_23-14-41_bVg3gXT.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/default.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/default.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,34 +43,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
-    "last_opened_file_path": "C:/Users/Бакдаулет/Documents/GitHub/cinema/media",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;Comma-separated (CSV)_id&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Бакдаулет/Documents/GitHub/cinema/media&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Бакдаулет\Documents\GitHub\cinema\media" />
       <recent name="C:\Users\Бакдаулет\Documents\GitHub\cinema\media\profile_pics" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Бакдаулет\Documents\GitHub\cinema\static" />
       <recent name="C:\Users\Бакдаулет\PycharmProjects\hospital\doctors\templates\pages" />
     </key>
   </component>
@@ -234,6 +232,8 @@
       <workItem from="1683045698403" duration="45000" />
       <workItem from="1683048823963" duration="931000" />
       <workItem from="1683072233182" duration="21461000" />
+      <workItem from="1683394913335" duration="4761000" />
+      <workItem from="1683615216287" duration="806000" />
     </task>
     <servers />
   </component>

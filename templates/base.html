@@ -17,7 +17,11 @@
 <body>
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary position-top">
     <a class="navbar-brand" href="/">{% block brand %}
-        <img class="rounded-circle account-img" src="{{ uploaded_file_url }}" style = "border-radius: 50%; height: 50px; width: 50px; margin-right: 20px">
+        {% if uploaded_file_url %}
+            <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" style = "border-radius: 50%; height: 50px; width: 50px; margin-right: 20px">
+         {% else %}
+            <img class="rounded-circle account-img" src="{% static 'default.jpg' %}" style = "border-radius: 50%; height: 50px; width: 50px; margin-right: 20px">
+        {% endif %}
 
 <!--        <img src="{% static '' %}" style="height: 60px; width: 60px">-->
         {% endblock %}</a>

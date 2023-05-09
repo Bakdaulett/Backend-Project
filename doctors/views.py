@@ -12,7 +12,7 @@ from django.template import loader
 
 from cinema import settings
 from .forms import FestivalForm, UploadForm
-from .models import Footballer, Statistics, Profile
+from .models import Footballer, Statistics, Profile, Item
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
@@ -100,12 +100,6 @@ def delete_view(request, id):
 
 
 def signup(request):
-    if request.method == 'POST' and request.FILES['myfile']:
-        myfile = request.FILES['myfile']
-        fs = FileSystemStorage()
-        filename = fs.save(myfile.name, myfile)
-        uploaded_file_url = fs.url(filename)
-
     if request.method == "POST":
         username = request.POST['username']
         email = request.POST['email']
@@ -137,6 +131,8 @@ def signup(request):
             return render(request, 'registration/signup.html', context)
 
         myuser = User.objects.create_user(username, email, pass1)
+        profile.user = myuser
+        profile.save()
 
         myuser.is_staff = True
         myuser.first_name = fname
@@ -172,14 +168,29 @@ def signout(request):
 
 
 def profile(request):
+    context = {}
     if request.method == 'POST' and request.FILES['myfile']:
+        prod = Item()
+
         myfile = request.FILES['myfile']
         fs = FileSystemStorage()
         filename = fs.save(myfile.name, myfile)
         uploaded_file_url = fs.url(filename)
-        return render(request, 'pages/profile.html', {
-            'uploaded_file_url': uploaded_file_url
-        })
+        profile.image = uploaded_file_url
+        context["uploaded_file_url"] = profile.image
+        prod.save()
+
+    return render(request, 'pages/profile.html', context)
+
+
+def addPhoto(request):
+    if request.method == "POST":
+        prod = Item()
+        if len(request.FILES) != 0:
+            prod.image = request.FILES['myfile']
+        prod.save()
+        messages.success(request, "Photo Added Successfully")
+        return redirect('/')
     return render(request, 'pages/profile.html')
 
 

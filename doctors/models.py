@@ -1,7 +1,7 @@
+import os
+from datetime import datetime
 from django.contrib.auth.models import User
 from django.db import models
-from django.db.models.signals import post_save
-from django.dispatch import receiver
 
 
 class Footballer(models.Model):
@@ -40,3 +40,12 @@ class Profile(models.Model):
         return f'{self.user.username} Profile'
 
 
+# def filepath1(request, filename):
+#     old_filename = filename
+#     timeNow = datetime.datetime.now().strftime('%Y%m%d%H:%M:%S')
+#     filename = "%s%s" % (timeNow, old_filename)
+#     return os.path.join('uploads/', filename)
+
+
+class Item(models.Model):
+    image = models.ImageField(upload_to="images/", null=True, blank=True)
